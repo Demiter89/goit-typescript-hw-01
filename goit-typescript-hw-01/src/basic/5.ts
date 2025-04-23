@@ -1,4 +1,4 @@
-// Оголошуємо тип для користувача
+
 type User = {
   name: string;
   age: number;

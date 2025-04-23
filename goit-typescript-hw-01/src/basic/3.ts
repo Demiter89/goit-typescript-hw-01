@@ -1,4 +1,4 @@
-// Типізований об'єкт product
+
 const product: {
   title: string;         
   price: number;         

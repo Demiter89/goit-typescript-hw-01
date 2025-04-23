@@ -1,9 +1,9 @@
-// Опис типу товару
+
 type Product = {
   id: number;
   name: string;
   price: number;
-  description?: string; // необов’язкове поле
+  description?: string; 
 };
 
 // Масив товарів

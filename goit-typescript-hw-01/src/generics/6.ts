@@ -7,7 +7,7 @@ async function fetchData<T>(url: string): Promise<T> {
   return data;
 }
 
-// Приклад використання
+
 type Post = {
   id: number;
   title: string;

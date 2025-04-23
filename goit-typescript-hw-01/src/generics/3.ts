@@ -3,7 +3,7 @@ type Pair<T, U> = {
   second: U;
 };
 
-// Приклади використання
+
 const pair1: Pair<number, string> = {
   first: 42,
   second: "answer",
