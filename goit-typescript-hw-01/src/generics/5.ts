@@ -1,7 +1,12 @@
-function wrapInArray<T>(value: T): T[] {
-  return [value];
+export enum UserRole {
+  admin = 'admin',
+  editor = 'editor',
+  guest = 'guest',
 }
 
-const numberArray = wrapInArray(5); // [5]
-const stringArray = wrapInArray("test"); // ["test"]
-const booleanArray = wrapInArray(true); // [true]
+// Record<ключі, значення>
+const RoleDescription: Record<UserRole, string> = {
+  admin: 'Admin User',
+  editor: 'Editor User',
+  guest: 'Guest User',
+};

@@ -1,10 +1,6 @@
 
-const product: {
-  title: string;         
-  price: number;         
-  isAvailable: boolean;  
-} = {
-  title: 'Headphones',
-  price: 150,
-  isAvailable: true
-};
+let value: string | number = "Hello";
+console.log("Value:", value);
+
+let status: 'enable' | 'disable' = 'enable';
+console.log("Status:", status);

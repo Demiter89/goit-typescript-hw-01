@@ -1,13 +1,17 @@
+enum DayOfWeek {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday
+}
 
-type User = {
-  name: string;
-  age: number;
-  isAdmin: boolean;
+const isWeekend = (day: DayOfWeek): boolean => {
+  return day === DayOfWeek.Saturday || day === DayOfWeek.Sunday;
 };
 
-// Типізуємо об'єкт user
-const user: User = {
-  name: 'John',
-  age: 30,
-  isAdmin: true,
-};
+// Приклад використання
+console.log(isWeekend(DayOfWeek.Monday));   // false
+console.log(isWeekend(DayOfWeek.Saturday)); // true

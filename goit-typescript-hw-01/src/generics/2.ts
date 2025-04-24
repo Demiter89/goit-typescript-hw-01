@@ -1,7 +1,27 @@
-function getArray<T>(items: T[]): T[] {
-  return [...items];
+
+
+type AllType = {
+  name: string;
+  position: number;
+  color: string;
+  weight: number;
+};
+
+function compare<
+  T extends Pick<AllType, 'name' | 'color'>,
+  U extends Pick<AllType, 'position' | 'weight'>
+>(top: T, bottom: U): AllType {
+  return {
+    name: top.name,
+    color: top.color,
+    position: bottom.position,
+    weight: bottom.weight,
+  };
 }
 
+const result = compare(
+  { name: 'Box', color: 'Red' },
+  { position: 1, weight: 50 }
+);
 
-const numberArray = getArray<number>([1, 2, 3]);
-const stringArray = getArray<string>(["a", "b", "c"]);
+console.log('Compare result:', result);

@@ -1,8 +1,17 @@
-function identity<T>(value: T): T {
-  return value;
+type User = {
+  name: string;
+  surname: string;
+  email: string;
+  password: string;
+};
+
+function createOrUpdateUser(initialValues: Partial<User>) {
+  // Тут могла б бути логіка оновлення
+  console.log("Updating user with:", initialValues);
 }
 
-
-const num = identity<number>(10); 
-const str = identity<string>("Hello"); 
-const bool = identity(true); 
+// Приклад оновлення лише частини полів
+createOrUpdateUser({
+  email: 'user@mail.com',
+  password: 'password123'
+});

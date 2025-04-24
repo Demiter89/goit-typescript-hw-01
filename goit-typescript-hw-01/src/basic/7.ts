@@ -1,28 +1,29 @@
-
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  description?: string; 
+type Page = {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: 'open' | 'close';
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
 };
 
-// Масив товарів
-const products: Product[] = [
-  {
-    id: 1,
-    name: 'Laptop',
-    price: 1500,
-    description: 'High performance laptop'
+const page1: Page = {
+  title: 'The awesome page',
+  likes: 100,
+  accounts: ['Max', 'Anton', 'Nikita'],
+  status: 'open',
+  details: {
+    createAt: new Date('2021-01-01'),
+    updateAt: new Date('2021-05-01'),
   },
-  {
-    id: 2,
-    name: 'Smartphone',
-    price: 800
-  },
-  {
-    id: 3,
-    name: 'Tablet',
-    price: 600,
-    description: 'Compact and powerful'
-  }
-];
+};
+
+const page2: Page = {
+  title: 'Python or Js',
+  likes: 5,
+  accounts: ['Alex'],
+  status: 'close',
+};
+console.log(page1, page2);

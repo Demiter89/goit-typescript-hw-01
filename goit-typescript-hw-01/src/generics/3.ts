@@ -1,15 +1,9 @@
-type Pair<T, U> = {
-  first: T;
-  second: U;
-};
+// src/generics/3.ts
 
+function merge<T, U>(objA: T, objB: U): T & U {
+  return Object.assign({}, objA, objB);
+}
 
-const pair1: Pair<number, string> = {
-  first: 42,
-  second: "answer",
-};
-
-const pair2: Pair<boolean, number[]> = {
-  first: true,
-  second: [1, 2, 3],
-};
+// Приклад використання
+const merged = merge({ name: 'Alice' }, { age: 25 });
+console.log('Merged:', merged);
